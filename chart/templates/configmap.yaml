@@ -5,9 +5,9 @@ metadata:
   labels:
     {{- include "bff.labels" . | nindent 4 }}
 data:
-  BFF_DEBUG: "{{ .Values.env.KRATEO_BFF_DEBUG }}"
+  BFF_DEBUG: "{{ .Values.env.BFF_DEBUG }}"
   BFF_PORT: "{{ .Values.service.port }}"
   AUTHN_STORE_NAMESPACE: {{ .Release.Namespace }}
-  BFF_CORS: "{{ .Values.env.KRATEO_BFF_CORS }}"
-  KRATEO_BFF_DUMP_ENV: "{{ .Values.env.KRATEO_BFF_DUMP_ENV }}"
+  BFF_CORS: "{{ .Values.env.BFF_CORS }}"
+  DUMP_ENV: "{{ .Values.env.BFF_DUMP_ENV }}"
   KUBE_SERVER_URL: {{ .Values.env.KUBE_SERVER_URL }}
