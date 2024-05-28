@@ -75,11 +75,11 @@ resources: {}
 
 livenessProbe:
   httpGet:
-    path: /apis/health
+    path: /health
     port: http
 readinessProbe:
   httpGet:
-    path: /apis/health
+    path: /health
     port: http
 
 autoscaling:
@@ -109,7 +109,7 @@ tolerations: []
 affinity: {}
 
 env:
-  BFF_DEBUG: "false"
+  BFF_DEBUG: "true"
   BFF_CORS: "true"
-  BFF_DUMP_ENV: "false"
+  BFF_DUMP_ENV: "true"
   KUBE_SERVER_URL: https://kubernetes.default.svc
