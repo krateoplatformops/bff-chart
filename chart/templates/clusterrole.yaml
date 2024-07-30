@@ -11,3 +11,9 @@ rules:
   - '*'
   verbs:
   - list
+- apiGroups:
+  - core.krateo.io
+  resources:
+  - '*'
+  verbs:
+  - list
