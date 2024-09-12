@@ -5,3 +5,4 @@ metadata:
   name: {{ include "bff.fullname" . }}-endpoint
 stringData:
   server-url: http://{{ include "bff.fullname" . }}.{{ .Release.Namespace }}.svc:{{ .Values.service.port }}
+  insecure: "true"
