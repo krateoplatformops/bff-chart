@@ -17,3 +17,12 @@ rules:
   - '*'
   verbs:
   - list
+# For checking user permissions on resources
+- apiGroups:
+  - ""
+  resources:
+  - serviceaccounts
+  - users
+  - groups
+  verbs:
+  - impersonate
